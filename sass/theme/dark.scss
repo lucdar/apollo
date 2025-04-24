@@ -1,4 +1,4 @@
-$bg-0: #121212;
+$bg-0: #202020;
 
 // Dark theme needs a bigger contrast compared to the white theme.
 $bg-1: lighten($bg-0, 5%);
@@ -17,7 +17,7 @@ $text-1: lighten($bg-0, 60%);
 
   --border-color: var(--bg-2);
 
-  --primary-color: #ef5350;
+  --primary-color: #50aece;
   --hover-color: white;
 
   .social > img {

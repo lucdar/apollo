@@ -6,10 +6,12 @@
   --label-color: #f0f0f0; // Text color of the label
 
   --hightlight-color: #f0f0f0;
+  --primary-color: #fb8937;
 }
 
 :root.dark {
   --hightlight-color: #204e8a;
+  --primary-color: #50aece;
 }
 
 // Define language colors map
@@ -232,6 +234,6 @@ pre {
   z-index: 10;
   background-color: transparent;
   border: none;
-  fill: #ef5350;
+  fill: var(--primary-color);
   /* Sets the color of the SVG, assuming it's an SVG icon */
 }
