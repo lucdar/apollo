@@ -1,0 +1,30 @@
+{% set prefix = page.components | join(sep='/') %}
+{% set fullpath = prefix ~ '/' ~ img_src %}
+{% set image = resize_image(path=fullpath, width=256, height=256) %}
+
+<div class="album-container">
+    <div class="album-cover">
+        <!-- Album cover image -->
+        <img src="{{ image.url }}" alt="{{ img_alt | default(value='Album Cover') }}">
+    </div>
+    <div class="album-details">
+        <!-- Header for the album -->
+        <h2>{{ header }}</h2>
+        
+        <!-- Links section -->
+        {% if links %}
+        <div class="album-links">
+            <ul>
+                <!-- {% for link in links %} -->
+                <!-- <li><a href="{{ link.url | safe }}" target="_blank">{{ link.name }}</a></li> -->
+                <!-- {% endfor %} -->
+            </ul>
+        </div>
+        {% endif %}
+
+        <!-- Body content -->
+        <div class="album-body">
+            {{ body | markdown | safe }}
+        </div>
+    </div>
+</div>

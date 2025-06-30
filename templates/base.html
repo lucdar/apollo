@@ -24,6 +24,10 @@
                 <div class="giscus"></div>
                 {% include "_giscus_script.html" %}
             {% endif %}
+
+            {% if page.extra.load_music_css %}
+                <link rel="stylesheet" href="{{ get_url(path='css/music-shortcode.css') | safe }}">
+            {% endif %}
         </div>
     </body>
 
